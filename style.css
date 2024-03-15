@@ -1,4 +1,5 @@
 @import "bulma.min.css";
+@import "animate.min.css";
 
 .align-center-by-block-display {
   display: block;
