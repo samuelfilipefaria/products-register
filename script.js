@@ -53,3 +53,10 @@ function openModal() {
 function closeModal() {
   document.getElementById("registerModal").classList.remove("is-active");
 }
+
+function toggleNavbar() {
+  document.getElementById("navbarBurger").classList.toggle("is-active");
+  document.getElementById("navbarMenu").classList.toggle("is-active");
+  document.getElementById("navbarMenu").classList.toggle("animate__animated");
+  document.getElementById("navbarMenu").classList.toggle("animate__fadeIn");
+}
