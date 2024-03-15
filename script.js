@@ -1,6 +1,11 @@
 products = []
 
 function addProduct() {
+  if (document.getElementById("nameInput").value.trim() == "" || document.getElementById("valueInput").value.trim() == "") {
+    document.getElementById("invalidInputWarning").style.display = "block";
+    return;
+  }
+
   products.push({
     name: document.getElementById("nameInput").value,
     description: document.getElementById("descriptionInput").value,
@@ -9,6 +14,7 @@ function addProduct() {
   });
 
   closeModal();
+  document.getElementById("invalidInputWarning").style.display = "none";
   cleanInputs();
   loadProducts();
 }
