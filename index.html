@@ -35,29 +35,46 @@
   <div class="columns is-justify-content-center">
     <div class="column is-half">
 
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Valor (R$)</th>
+          </tr>
+        </thead>
+        <tbody id="productList">
+        </tbody>
+      </table>
+
       <button class="button" onclick="openModal()" style="display: block; margin: 0 auto;">Adicionar um novo produto</button>
 
-      <div class="modal" id="registerModal">
-        <div class="modal-content">
+    </div>
+  </div>
+
+  <div class="columns is-justify-content-center">
+    <div class="column">
+
+      <div class="modal" id="registerModal" style="background-color: #FFF;">
+        <div class="modal-content p-6">
 
           <div class="field">
             <label class="label">Nome</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Nome do produto...">
+              <input class="input" type="text" placeholder="Nome do produto..." id="nameInput">
             </div>
           </div>
 
           <div class="field">
             <label class="label">Descrição</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Detalhes do produto..."></textarea>
+              <textarea class="textarea" placeholder="Detalhes do produto..." id="descriptionInput"></textarea>
             </div>
           </div>
 
           <div class="field">
             <label class="label">Valor (R$)</label>
             <div class="control">
-              <input class="input" type="number" placeholder="Valor do produto...">
+              <input class="input" type="number" placeholder="Valor do produto..." id="valueInput">
             </div>
           </div>
 
@@ -65,7 +82,7 @@
             <label class="label">Está disponível para venda?</label>
             <div class="control">
               <div class="select">
-                <select>
+                <select id="availabilityInput">
                   <option>Sim</option>
                   <option>Não</option>
                 </select>
@@ -75,7 +92,7 @@
 
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-link">Cadastrar produto</button>
+              <button class="button is-link" onclick="addProduct()">Cadastrar produto</button>
             </div>
             <div class="control">
               <button class="button is-link is-light" onclick="closeModal()">Cancelar</button>
@@ -83,7 +100,6 @@
           </div>
 
         </div>
-        <button class="modal-close is-large" aria-label="close"></button>
       </div>
     </div>
   </div>

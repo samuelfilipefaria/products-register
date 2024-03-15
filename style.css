@@ -1,1 +1,15 @@
 @import "bulma.min.css";
+
+.modal-content {
+  box-shadow:
+  0px 0px 1.2px rgba(0, 0, 0, 0.029),
+  0px 0px 2.7px rgba(0, 0, 0, 0.043),
+  0px 0px 4.6px rgba(0, 0, 0, 0.054),
+  0px 0px 6.9px rgba(0, 0, 0, 0.062),
+  0px 0px 10px rgba(0, 0, 0, 0.07),
+  0px 0px 14.2px rgba(0, 0, 0, 0.078),
+  0px 0px 20.1px rgba(0, 0, 0, 0.086),
+  0px 0px 29.2px rgba(0, 0, 0, 0.097),
+  0px 0px 45px rgba(0, 0, 0, 0.111),
+  0px 0px 80px rgba(0, 0, 0, 0.14);
+}
