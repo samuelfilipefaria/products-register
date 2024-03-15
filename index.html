@@ -6,47 +6,35 @@
   <title>Cadastro de Produtos</title>
   <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-link" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="#">
+    <a class="navbar-item" href="#" style="font-size: 25px;">
       Cadastro de Produtos
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
     </a>
   </div>
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
-        Link 1
+      <a class="navbar-item" target="_blank" href="https://www.oaktecnologia.com">
+        Empresa
       </a>
 
-      <a class="navbar-item">
-        Link 2
+      <a class="navbar-item" target="_blank" href="https://github.com/samuelfilipefaria/products-register">
+        GitHub
       </a>
     </div>
   </div>
 </nav>
 <body>
-  <div class="columns is-justify-content-center">
+
+  <div class="columns is-justify-content-center mt-6">
     <div class="column is-half">
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Valor (R$)</th>
-          </tr>
-        </thead>
-        <tbody id="productList">
-        </tbody>
-      </table>
+      <div class="has-text-centered" id="productList">
+        <span class="is-italic is-size-3">Sem produtos cadastrados</span>
+      </div>
 
-      <button class="button" onclick="openModal()" style="display: block; margin: 0 auto;">Adicionar um novo produto</button>
+      <button class="button align-center-by-block-display mt-6" onclick="openModal()">Adicionar um novo produto</button>
 
     </div>
   </div>
@@ -90,7 +78,7 @@
             </div>
           </div>
 
-          <div class="field is-grouped">
+          <div class="field is-grouped mt-6">
             <div class="control">
               <button class="button is-link" onclick="addProduct()">Cadastrar produto</button>
             </div>

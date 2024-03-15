@@ -1,5 +1,10 @@
 @import "bulma.min.css";
 
+.align-center-by-block-display {
+  display: block;
+  margin: 0 auto;
+}
+
 .modal-content {
   box-shadow:
   0px 0px 1.2px rgba(0, 0, 0, 0.029),

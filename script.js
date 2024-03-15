@@ -16,13 +16,24 @@ function addProduct() {
 
 function loadProducts() {
   products.sort(function (a, b) { return a.value - b.value; });
-  document.getElementById("productList").innerHTML = "";
+  document.getElementById("productList").innerHTML = `
+    <table class="table align-center-by-block-display">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Valor (R$)</th>
+        </tr>
+      </thead>
+      <tbody id="productInfos">
+      <tbody>
+    </table>
+  `;
 
   products.forEach(product => {
-    document.getElementById("productList").innerHTML += `
+    document.getElementById("productInfos").innerHTML += `
       <tr>
-      <td>${product.name}</td>
-      <td>${product.value}</td>
+        <td>${product.name}</td>
+        <td>${product.value}</td>
       </tr>
     `
   });
