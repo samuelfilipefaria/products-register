@@ -23,7 +23,7 @@ function addProduct() {
 function loadProducts() {
   products.sort(function (a, b) { return a.value - b.value; });
   document.getElementById("productList").innerHTML = `
-    <table class="table align-center-by-block-display">
+    <table class="table is-striped is-bordered is-fullwidth has-text-left">
       <thead>
         <tr>
           <th>Nome</th>
